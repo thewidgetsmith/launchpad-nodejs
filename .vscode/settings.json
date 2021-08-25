@@ -1,0 +1,21 @@
+{
+  "cSpell.words": [
+    "aggies",
+    "pino",
+    "usu"
+  ],
+  "eslint.workingDirectories": [
+      {
+          "directory": "./src",
+          "changeProcessCWD": true
+      }
+  ],
+  "files.associations": {
+  },
+  "search.exclude": {
+    ".git": true,
+    "node_modules": true,
+    "npm-debug.log.*": true,
+    "package-lock.json": true
+  }
+}
