@@ -5,17 +5,27 @@
     "usu"
   ],
   "eslint.workingDirectories": [
-      {
-          "directory": "./src",
-          "changeProcessCWD": true
-      }
+    {
+      "directory": "./src",
+      "changeProcessCWD": true
+    }
   ],
   "files.associations": {
+    ".babelrc": "jsonc",
+    ".eslintrc": "jsonc",
+    ".prettierrc": "jsonc",
+    ".eslintignore": "ignore"
   },
   "search.exclude": {
     ".git": true,
+    ".eslintcache": true,
+    ".erb/dll": true,
+    "build/{release,app/dist}": true,
     "node_modules": true,
     "npm-debug.log.*": true,
-    "package-lock.json": true
+    "test/**/__snapshots__": true,
+    "package-lock.json": true,
+    "yarn.lock": true,
+    "*.{css,sass,scss}.d.ts": true
   }
 }

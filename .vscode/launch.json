@@ -5,11 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Node: Nodemon",
-      "processId": "${command:PickProcess}",
+      "name": "Node: Run",
+      "program": "${workspaceFolder}/src/app.js",
       "protocol": "inspector",
       "request": "launch",
-      "restart": true,
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
       "type": "node"
     }
   ]

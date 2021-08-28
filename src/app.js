@@ -18,3 +18,6 @@ app.get('/', (_, res) => {
 
 app.listen(port, HOST)
 console.log(`Running on http://${HOST}:${port}`)
+
+// exported for example test
+exports.testFunc = (base, exp) => Math.pow(base, exp)

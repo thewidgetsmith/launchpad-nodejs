@@ -1,7 +1,0 @@
-{
-  "watch": [
-    "./src"
-  ],
-  "ext": "js,json",
-  "signal": "SIGTERM"
-}

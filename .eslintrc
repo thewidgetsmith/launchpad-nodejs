@@ -5,11 +5,15 @@
     "es6": true
   },
   "rules": {
-    "no-console": 1,
+    "arrow-parens": ["warn", "always"],
+    "curly": ["warn", "all"],
     "eqeqeq": "warn",
-    "no-unused-vars": 1,
+    "no-console": "warn",
     "no-extra-semi": "warn",
-    "semi": "off"
+    "no-unused-vars": "warn",
+    "semi": ["warn", "never", { "beforeStatementContinuationChars": "always" }],
+    "strict": ["warn", "safe"]
+
   },
   "extends": "eslint:recommended",
   "parserOptions": {

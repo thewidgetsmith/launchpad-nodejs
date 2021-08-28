@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "CoenraadS.bracket-pair-colorizer-2",
+    "EditorConfig.EditorConfig",
+    "firsttris.vscode-jest-runner"
+  ]
+}

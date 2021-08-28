@@ -1,26 +1,32 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.185.0/containers/javascript-node
 {
-  "name": "Node.js",
+  "name": "Node.js With InstantClient",
   "build": {
+    "context": "..",
     "dockerfile": "Dockerfile",
-    // Update 'VARIANT' to pick a Node version: 12, 14, 16
+    // Change 'VARIANT' to pick use a specific Node version:
+    // Options are:
+    //  10-buster-slim
+    //  12-buster-slim
+    //  14-buster-slim
+    //  16-buster-slim
     "args": {
+      "INSTALL_ZSH": "true",
+      "UPGRADE_PACKAGES": "true",
       "VARIANT": "14-buster-slim"
     }
   },
-  // Set *default* container specific settings.json values on container create.
-  "settings": {},
+  // Array of Docker CLI arguments for the development container.
+  //  `--env-file` specifies a file of environment variables
+  "runArgs": ["--env-file", ".env"],
   // Add the IDs of extensions you want installed when the container is created.
-  "extensions": [
-    "dbaeumer.vscode-eslint"
-  ],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [3000],
   // Use 'portsAttributes' to set default properties for specific forwarded ports. More info: https://code.visualstudio.com/docs/remote/devcontainerjson-reference.
   "portsAttributes": {
     "3000": {
-      "label": "Hello Remote World",
+      "label": "HTTP API",
       "onAutoForward": "notify"
     }
   },
@@ -31,5 +37,17 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "npm install",
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  "remoteUser": "node"
+  "remoteUser": "node",
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "formulahendry.code-runner"
+  ],
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "javascript.suggestionActions.enabled": false,
+    "typescript.suggestionActions.enabled": false,
+    "terminal.integrated.defaultProfile.linux": "zsh"
+  }
 }
