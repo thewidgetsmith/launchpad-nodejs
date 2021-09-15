@@ -1,9 +1,5 @@
 /* global describe, expect, it */
-'use strict'
-
-const {
-  testFunc
-} = require('./app')
+import { testFunc } from './app'
 
 describe('app:function Tests for testFunc', () => {
   it('returns correct exponent calculations', () => {

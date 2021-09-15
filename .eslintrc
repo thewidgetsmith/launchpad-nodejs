@@ -4,6 +4,12 @@
     "node": true,
     "es6": true
   },
+  "extends": [
+    "eslint:recommended",
+    "standard"
+  ],
+  "parserOptions": {
+  },
   "rules": {
     "arrow-parens": ["warn", "always"],
     "curly": ["warn", "all"],
@@ -14,11 +20,5 @@
     "semi": ["warn", "never", { "beforeStatementContinuationChars": "always" }],
     "strict": ["warn", "safe"]
 
-  },
-  "extends": "eslint:recommended",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
-    }
   }
 }

@@ -5,6 +5,21 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "NPM: Run",
+      "protocol": "inspector",
+      "request": "launch",
+      "restart": true,
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node"
+    },
+    {
       "name": "Node: Run",
       "program": "${workspaceFolder}/src/app.js",
       "protocol": "inspector",

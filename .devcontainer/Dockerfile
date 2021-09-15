@@ -1,5 +1,5 @@
 # [Choice] Node.js version: 16, 14, 12, 10
-ARG VARIANT="14-buster-slim"
+ARG VARIANT="16-buster-slim"
 FROM harbor.usu.edu/base-images/node-instantclient:${VARIANT}
 
 # Copy scripts to execute
@@ -18,8 +18,6 @@ ARG USER_GID=$USER_UID
 
 RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
-    # Remove imagemagick due to https://security-tracker.debian.org/tracker/CVE-2019-10131
-    && apt-get purge -y imagemagick imagemagick-6-common \
     # Install common packages, non-root user and install nvm
     && bash /tmp/scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" "true" "true"
 
