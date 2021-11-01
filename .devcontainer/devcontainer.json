@@ -7,14 +7,14 @@
     "dockerfile": "Dockerfile",
     // Change 'VARIANT' to pick use a specific Node version:
     // Options are:
-    //  10-buster-slim
-    //  12-buster-slim
-    //  14-buster-slim
-    //  16-buster-slim
+    //  10-bullseye-slim
+    //  12-bullseye-slim
+    //  14-bullseye-slim
+    //  16-bullseye-slim
     "args": {
       "INSTALL_ZSH": "true",
       "UPGRADE_PACKAGES": "true",
-      "VARIANT": "16-buster-slim"
+      "VARIANT": "16-bullseye-slim"
     }
   },
   // Array of Docker CLI arguments for the development container.

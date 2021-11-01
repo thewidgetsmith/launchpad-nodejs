@@ -1,5 +1,5 @@
 # [Choice] Node.js version: 16, 14, 12, 10
-ARG VARIANT="16-buster-slim"
+ARG VARIANT="16-bullseye-slim"
 FROM harbor.usu.edu/base-images/node-instantclient:${VARIANT}
 
 # Copy scripts to execute
